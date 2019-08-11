@@ -2,7 +2,7 @@ package cn.divine.pattern.create.factory.simple;
 
 
 /**
- * 小作坊式的工厂模型
+ * 简单工厂（小作坊式的工厂模型）
  * Created by Tom on 2018/3/4.
  */
 public class SimpleFactoryTest {

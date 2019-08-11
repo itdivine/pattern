@@ -1,6 +1,7 @@
 package cn.divine.pattern.create.factory.func;
 
 /**
+ * (标准)工厂模式
  * Created by Tom on 2018/3/4.
  */
 public class FactoryTest {

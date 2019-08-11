@@ -59,7 +59,7 @@ public class ThreadSafeTest {
 
 
 
-       // Color.INSTANCE.getInstance();
+       // ServiceCode.INSTANCE.getInstance();
 
 
 

@@ -1,39 +1,37 @@
 package cn.divine.pattern.create.singleton.lazy;
 
+
 /**
- * Created by Tom on 2018/3/7.
+ * 懒汉式单例 - 史上最牛B的单例模式的实现方式
+ * 特点：在外部类被调用的时候内部类才会被加载
+ * 优点：兼顾饿汉式的内存浪费，也兼顾synchronized性能问题
+ *
+ * 1、应用启动时，类不会初始化
+ * 2、类被调用时（LazyThree.getInstance()），执行到LazyHolder.LAZY，内部类才会被加载
+ *
+ * 内部类：
+ *      静态内部类和非静态内部类一样，都不会因为外部内的加载而加载，同时静态内部类的加载不需要依附外部类，
+ *      在使用时才加载，不过在加载静态内部类的过程中也会加载外部类
  */
-
-//懒汉式单例
-    //特点：在外部类被调用的时候内部类才会被加载
-    //内部类一定是要在方法调用之前初始化
-    //巧妙地避免了线程安全问题
-
-    //这种形式兼顾饿汉式的内存浪费，也兼顾synchronized性能问题
-    //完美地屏蔽了这两个缺点
-    //史上最牛B的单例模式的实现方式
 public class LazyThree {
-
-
-    //默认使用LazyThree的时候，会先初始化内部类
-    //如果没使用的话，内部类是不加载的
 
     private LazyThree(){}
 
-
-    //每一个关键字都不是多余的
-    //static 是为了使单例的空间共享
-    //保证这个方法不会被重写，重载
+    /**
+     * static 是为了使单例的空间共享
+     * final保证这个方法不会被重写，重载
+     * @return
+     */
     public static final LazyThree getInstance(){
-        //在返回结果以前，一定会先加载内部类
-        return LazyHolder.LAZY;
+        return LazyHolder.LAZY; //主动调用了内部类
     }
 
-
-    //默认不加载
+    /**
+     * 必须主动调用，否则不会加载
+     * 1、应用启动时，不会加载
+     * 2、外部类创建时，不会加载
+     */
     private static class LazyHolder{
         private static final LazyThree LAZY = new LazyThree();
     }
-
-
 }
