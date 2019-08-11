@@ -1,11 +1,9 @@
 package cn.divine.pattern.create.singleton.enumobj;
 
 /**
- * Created by Tom on 2018/3/7.
+ * 枚举：
+ *     1、只应用启动时加载一次
  */
-
-//常量中去使用，常量不就是用来大家都能够共用吗？
-    //通常在通用API中使用
 public enum ServiceCode {
 
     SYSTEM_NORMAL(200,"系统正常"),
