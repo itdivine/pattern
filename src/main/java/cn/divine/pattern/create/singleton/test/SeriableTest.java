@@ -1,6 +1,6 @@
 package cn.divine.pattern.create.singleton.test;
 
-import cn.divine.pattern.create.singleton.seriable.Seriable;
+import cn.divine.pattern.create.singleton.seriable.User;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -13,21 +13,21 @@ import java.io.ObjectOutputStream;
 public class SeriableTest {
     public static void main(String[] args) {
 
-        Seriable s1 = null;
-        Seriable s2 = Seriable.getInstance();
+        User s1 = null;
+        User s2 = User.getUser();
 
         FileOutputStream fos = null;
         try {
-            fos = new FileOutputStream("Seriable.obj");
+            fos = new FileOutputStream("User.obj");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(s2);
             oos.flush();
             oos.close();
 
 
-            FileInputStream fis = new FileInputStream("Seriable.obj");
+            FileInputStream fis = new FileInputStream("User.obj");
             ObjectInputStream ois = new ObjectInputStream(fis);
-            s1 = (Seriable)ois.readObject();
+            s1 = (User)ois.readObject();
             ois.close();
 
             System.out.println(s1);

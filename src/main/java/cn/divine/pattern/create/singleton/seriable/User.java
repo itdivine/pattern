@@ -3,11 +3,9 @@ package cn.divine.pattern.create.singleton.seriable;
 import java.io.Serializable;
 
 /**
- * Created by Tom on 2018/3/7.
+ * 反序列化时导致单例破坏
  */
-
-//反序列化时导致单例破坏
-public class Seriable implements Serializable {
+public class User implements Serializable {
 
 
     //序列化就是说把内存中的状态通过转换成字节码的形式
@@ -20,17 +18,18 @@ public class Seriable implements Serializable {
     //在转换过程中会重新创建对象new
 
 
-    public  final static Seriable INSTANCE = new Seriable();
-    private Seriable(){}
+    public  final static User user = new User();
 
-    public static  Seriable getInstance(){
-        return INSTANCE;
+    private User(){}
+
+    public static User getUser(){
+        return user;
     }
 
     //如果实现了serializable接口的类中包含readResolve则返回true
     //防止单例被破坏
     private  Object readResolve(){
-        return  INSTANCE;
+        return user;
     }
 
 }

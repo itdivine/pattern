@@ -59,7 +59,7 @@ public class ThreadSafeTest {
 
 
 
-       // ServiceCode.INSTANCE.getInstance();
+       // ServiceCode.user.getUser();
 
 
 
