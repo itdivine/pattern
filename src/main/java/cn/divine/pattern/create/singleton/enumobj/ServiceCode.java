@@ -1,4 +1,4 @@
-package cn.divine.pattern.create.singleton.register;
+package cn.divine.pattern.create.singleton.enumobj;
 
 /**
  * Created by Tom on 2018/3/7.

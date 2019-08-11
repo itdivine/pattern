@@ -1,6 +1,6 @@
 package cn.divine.pattern.create.singleton.test;
 
-import cn.divine.pattern.create.singleton.register.ServiceCode;
+import cn.divine.pattern.create.singleton.enumobj.ServiceCode;
 
 /**
  * Created by Tom on 2018/3/7.
