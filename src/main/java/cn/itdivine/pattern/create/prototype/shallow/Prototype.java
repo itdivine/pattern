@@ -2,9 +2,7 @@ package cn.itdivine.pattern.create.prototype.shallow;
 
 
 /**
- * Cloneable  浅拷贝：对象CloneTarget的引用是同一个，修改任意一个，其他都会改变
- *
- * Created by Tom on 2018/3/7.
+ * Cloneable  浅拷贝：拷贝的是引用（CloneTarget target），一旦修改，所有对象都会修改
  */
 public class Prototype implements Cloneable {
 

@@ -1,7 +1,6 @@
 package cn.itdivine.pattern.create.factory.abstr;
 
 
-import cn.divine.pattern.create.factory.*;
 import cn.itdivine.pattern.create.factory.*;
 
 /**

@@ -1,8 +1,5 @@
 package cn.itdivine.pattern.create.prototype.shallow;
 
-/**
- * Created by Tom on 2018/3/7.
- */
 public class CloneTest {
 
     public static void main(String[] args) {
@@ -18,9 +15,5 @@ public class CloneTest {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
-
-
     }
 }
